@@ -1,0 +1,45 @@
+name: Bug report
+description: Something isn't working — playback won't hand off, audio glitches, popup errors, etc.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What went wrong?
+      description: A clear description of the issue.
+      placeholder: e.g. "Phone playback doesn't pull to the browser tab — popup shows 'Idle' even though I'm paired."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Pair phone
+        2. Start a song on the phone
+        3. Click "← Tab" in popup
+        4. Nothing happens
+    validations:
+      required: true
+  - type: input
+    id: chrome-version
+    attributes:
+      label: Chrome version
+      placeholder: e.g. 131.0.6778.85
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      placeholder: e.g. 1.0.0
+  - type: input
+    id: phone
+    attributes:
+      label: Phone OS + YouTube Music app version
+      placeholder: e.g. iOS 18.2, YT Music 7.20
+  - type: textarea
+    id: console
+    attributes:
+      label: Console logs (optional)
+      description: Open the extension popup, right-click → Inspect → Console tab. Paste anything red.
+      render: shell
